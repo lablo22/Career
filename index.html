@@ -1,143 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Form</title>
-    <meta name="Description" content="This is html form">
-    <meta name="keyword" content="html, form, About html, about form">
-    <meta name="Author" content="Ahmad Faraz">
-    <!-- Custom CSS File Link -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CDN Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<title>Animation Text</title>
+
+<style>
+* 
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif; 
+}
+
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #252839;
+}
+
+h3 
+{
+	position: relative;
+	/* font-size: 14vw; */
+	font-size: 5vw;
+	color: #252839;
+	-webkit-text-stroke: 0.3vw #383d52;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 5vw;
+}
+
+h3::before 
+{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	color: #01fe87;
+	-webkit-text-stroke: 0vw #383d52;
+	border-right: 2px solid #01fe87;
+	overflow: hidden;
+	animation: animate 6s linear infinite;
+}
+
+@keyframes animate 
+{
+	0% , 10%, 100%
+	{
+		width: 0;
+	}
+	70% , 90%
+	{
+		width: 100%;
+	}
+}
+
+</style>
+
 </head>
 <body>
-    <!-- Back to Top Btn -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-caret-up-fill"></i></button>
 
-    <section id="banner" class="text-center">
-        <h1 class="title-txt"><strong>Career Institute</strong></h1>
-        <div class="banner-links my-5">
-            <a href="#about">About</a>
-            <a href="#theory_content">Theory</a>
-            <a href="#joinForm">Join Form</a>
-        </div>
-        <marquee behavior="scroll" direction="left" scrollamount="12">
-            <small class="text-white">Some content of this page is used from the career institute website if you are interested to visit the official site click on this link -> <a href="http://www.career.edu.pk/" target="_blank" class="text-white">Career institute</a></small>
-        </marquee>
-    </section>
-    
-    <section id="about" class="my-5">
-        <div class="container p-5">
-            <div class="row">
-                <div class="col-sm-12 col-md-6 mb-3">
-                    <img src="about.jpg" alt="Cover image" class="img-fluid">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <h4><strong>About Us</strong></h4>
-                    <p><strong>We are Future of Education</strong></p>
-                    <p>Since our origin from 2010, we have possessed the capacity to appreciate ourselves as the main IT organizations in Pakistan; we have been conveying our best among the understudies and have figured out how to make esteems among them which will make them prepared for their future. We have additionally centered on the improvement of the specialized and also the social abilities of our understudies and have figured out how to prepare in excess of 7000 understudies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+	<h3 data-text="Code_BY_Ahmad_Faraz...">Code_BY_Ahmad_Faraz...</h3>
+	<h1>&#128526;</h1>
+	<h1>&#128578;</h1>
 
-    <section id="theory_content">
-        <h3>What Is a Website and How Does It Work?</h3>
-        <p>A website (also written as web site) is a collection of web pages and related content that is identified by a common domain name and published on at least one web server. Notable examples are wikipedia.org, google.com, and amazon.com.
-
-            All publicly accessible websites collectively constitute the World Wide Web. There are also private websites that can only be accessed on a private network, such as a company's internal website for its employees.
-            
-            Websites are typically dedicated to a particular topic or purpose, such as news, education, commerce, entertainment, or social networking. Hyperlinking between web pages guides the navigation of the site, which often starts with a home page.
-            
-            Users can access websites on a range of devices, including desktops, laptops, tablets, and smartphones. The app used on these devices is called a web browser.</p>
-        <p><strong>History</strong></p>
-        <p>The World Wide Web (WWW) was created in 1989 by the British CERN physicist Tim Berners-Lee.[1][2] On 30 April 1993, CERN announced that the World Wide Web would be free to use for anyone, contributing to the immense growth of the Web.[3] Before the introduction of the Hypertext Transfer Protocol (HTTP), other protocols such as File Transfer Protocol and the gopher protocol were used to retrieve individual files from a server. These protocols offer a simple directory structure which the user navigates and where they choose files to download. Documents were most often presented as plain text files without formatting or were encoded in word processor formats.</p>
-        <p><strong>Overview</strong></p>
-        <p>Websites can be used in various fashions: a personal website, a corporate website for a company, a government website, an organization website, etc. Websites can be the work of an individual, a business or other organization, and are typically dedicated to a particular topic or purpose. Any website can contain a hyperlink to any other website, so the distinction between individual sites, as perceived by the user, can be blurred.</p>
-        <p>Some websites require user registration or subscription to access content. Examples of subscription websites include many business sites, news websites, academic journal websites, gaming websites, file-sharing websites, message boards, web-based email, social networking websites, websites providing real-time stock market data, as well as sites providing various other services.</p>
-        <p>While "web site" was the original spelling (sometimes capitalized "Web site", since "Web" is a proper noun when referring to the World Wide Web), this variant has become rarely used, and "website" has become the standard spelling. All major style guides, such as The Chicago Manual of Style[4] and the AP Stylebook,[5] have reflected this change.</p>
-        <p><strong>Static website</strong></p>
-        <p>A static website is one that has web pages stored on the server in the format that is sent to a client web browser. It is primarily coded in Hypertext Markup Language (HTML); Cascading Style Sheets (CSS) are used to control appearance beyond basic HTML. Images are commonly used to create the desired appearance and as part of the main content. Audio or video might also be considered "static" content if it plays automatically or is generally non-interactive. This type of website usually displays the same information to all visitors. Similar to handing out a printed brochure to customers or clients, a static website will generally provide consistent, standard information for an extended period of time. Although the website owner may make updates periodically, it is a manual process to edit the text, photos, and other content and may require basic website design skills and software. Simple forms or marketing examples of websites, such as classic website, a five-page website or a brochure website are often static websites, because they present pre-defined, static information to the user. This may include information about a company and its products and services through text, photos, animations, audio/video, and navigation menus.</p>
-        <p>Static websites may still use server side includes (SSI) as an editing convenience, such as sharing a common menu bar across many pages. As the site's behavior to the reader is still static, this is not considered a dynamic site.</p>
-        <p><strong>Dynamic website</strong></p>
-        <p>A dynamic website is one that changes or customizes itself frequently and automatically. Server-side dynamic pages are generated "on the fly" by computer code that produces the HTML (CSS are responsible for appearance and thus, are static files). There are a wide range of software systems, such as CGI, Java Servlets and Java Server Pages (JSP), Active Server Pages and ColdFusion (CFML) that are available to generate dynamic web systems and dynamic sites. Various web application frameworks and web template systems are available for general-use programming languages like Perl, PHP, Python and Ruby to make it faster and easier to create complex dynamic websites.</p>
-        <p>A site can display the current state of a dialogue between users, monitor a changing situation, or provide information in some way personalized to the requirements of the individual user. For example, when the front page of a news site is requested, the code running on the webserver might combine stored HTML fragments with news stories retrieved from a database or another website via RSS to produce a page that includes the latest information. Dynamic sites can be interactive by using HTML forms, storing and reading back browser cookies, or by creating a series of pages that reflect the previous history of clicks. Another example of dynamic content is when a retail website with a database of media products allows a user to input a search request, e.g. for the keyword Beatles. In response, the content of the web page will spontaneously change the way it looked before, and will then display a list of Beatles products like CDs, DVDs, and books. Dynamic HTML uses JavaScript code to instruct the web browser how to interactively modify the page contents. One way to simulate a certain type of dynamic website while avoiding the performance loss of initiating the dynamic engine on a per-user or per-connection basis is to periodically automatically regenerate a large series of static pages.</p>
-        <p><strong>Multimedia and interactive content</strong></p>
-        <p>Early websites had only text, and soon after, images. Web browser plug ins were then used to add audio, video, and interactivity (such as for a rich web application that mirrors the complexity of a desktop application like a word processor). Examples of such plug-ins are Microsoft Silverlight, Adobe Flash Player, Adobe Shockwave Player, and Java SE. HTML 5 includes provisions for audio and video without plugins. JavaScript is also built into most modern web browsers, and allows for website creators to send code to the web browser that instructs it how to interactively modify page content and communicate with the web server if needed. The browser's internal representation of the content is known as the Document Object Model (DOM).
-
-            WebGL (Web Graphics Library) is a modern JavaScript API for rendering interactive 3D graphics without the use of plug-ins. It allows interactive content such as 3D animations, visualizations and video explainers to presented users in the most intuitive way.[6]
-            
-            A 2010-era trend in websites called "responsive design" has given the best viewing experience as it provides a device based layout for users. These websites change their layout according to the device or mobile platform, thus giving a rich user experience.[7]</p>
-        <p><strong>Types</strong></p>
-        <p>Websites can be divided into two broad categories—static and interactive. Interactive sites are part of the Web 2.0 community of sites and allow for interactivity between the site owner and site visitors or users. Static sites serve or capture information but do not allow engagement with the audience or users directly. Some websites are informational or produced by enthusiasts or for personal use or entertainment. Many websites do aim to make money, using one or more business models, including:
-
-            Posting interesting content and selling contextual advertising either through direct sales or through an advertising network.
-            E-commerce: products or services are purchased directly through the website
-            Advertising products or services available at a brick and mortar business
-            Freemium: basic content is available for free but premium content requires a payment (e.g., WordPress website, it is an open-source platform to build a blog or website.)
-            There are many varieties of websites, each specializing in a particular type of content or use, and they may be arbitrarily classified in any number of ways.</p>
-    </section>
-
-    <section id="joinForm">
-
-        <div class="container">
-            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center">
-                <h3 class="title-txt-sm"><strong>Join Career</strong></h3>
-                <form id="login-form" class="rounded bg-white shadow p-5">
-                    <p><strong>Login Info :</strong></p>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                        <label for="email">Email address</label>
-                    </div>
-                    <div class="form-floating">
-                       <input type="password" class="form-control" id="password" placeholder="Password">
-                       <label for="password">Password</label>
-                    </div>
-                    <p class="mt-3"><strong>Porsonal Info :</strong></p>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="fullname" placeholder="Name">
-                        <label for="fullname">Name</label>
-                    </div>
-                    <div class=" mb-3">
-                        <input type="date" class="form-control py-3" id="birthday" placeholder="Birthday">
-                    </div>
-                    <select class="form-control mb-3" name="country" id="country">
-                        <option value="">Where are you from?</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Mars">Mars :)</option>
-                        <option value="India">India</option>
-                        <option value="Algeria">Algeria</option>
-                    </select>
-                    <div class="mb-3 ps-1 text-start">
-                        <label>Gender :</label>
-                        <input type="radio" class="gender" id="gender" name="gender" value="Male"> Male
-                        &nbsp;
-                        <input type="radio" class="gender" id="gender" name="gender" value="Female"> Female
-                    </div>
-
-                    <button type="button" class="btn btn-primary submit_btn w-100 my-4" onclick="check_form()">Submit</button>
-                    <span class="text-danger" id="form_error"></span><br>
-                </form>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Js File Link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- <script src="main.js"></script> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+	<script>
+		setTimeout(function(){
+			window.location.href = "form.html";
+		}, 5000);
+	</script>
 
 </body>
 </html>

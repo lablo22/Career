@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html & CSS Form</title>
+    <meta name="discription" content="This is html and css form">
+    <meta name="keyword" content="html, CSS, form, html css form">
+    <meta name="Author" content="Ahmad Faraz">
+    <!-- Bootstrap CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Custom Style Sheet Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- Form Section -->
+<section id="formSection" class="bg-white">
+
+    <form id="FormSubmit">
+        <div class="p-4">
+            <div class="container text-center">
+                <h2>NAVTTC Form</h2>
+            </div>
+            <div class="container mt-4">
+                <div class="row mb-3">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="fullname" placeholder="name@example.com" autocomplete="off">
+                            <label for="fullname">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="fatherName" placeholder="name@example.com" autocomplete="off">
+                            <label for="fatherName">Father Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="phone" placeholder="name@example.com" autocomplete="off">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" autocomplete="off">
+                            <label for="email">Email address</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 mb-3">
+                        <select class="form-select" id="campus" aria-label="Default select example">
+                            <option selected value="">Select Campus</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <select class="form-select" id="course" aria-label="Default select example">
+                            <option selected value="">Select Course</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="container-fluid mb-3">
+                    <label>Gender :</label>
+                    <input type="radio" name="gender" id="gender" value="Male">&nbsp;Male
+                    &nbsp;&nbsp;
+                    <input type="radio" name="gender" id="gender" value="Female">&nbsp;Female
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="address" placeholder="name@example.com" autocomplete="off">
+                            <label for="address">Address :</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="education" placeholder="name@example.com" autocomplete="off">
+                            <label for="education">Education :</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span id="formError"></span>
+        </div>
+        <button type="submit" id="submit">Click to Submit</button>
+    </form>
+
+</section>
+
+<!-- Bootstrap Js File Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+    document.getElementById("FormSubmit").addEventListener("submit", function(e){
+        e.preventDefault();
+        
+        var fullname = $("#fullname").val();
+        var fatherName = $("#fatherName").val();
+        var phone = $("#phone").val();
+        var email = $("#email").val();
+        var campus = $("#campus").val();
+        var course = $("#course").val();
+        var gender = [];
+
+        $("#gender").each(function(){
+            if($(this).is(":checked"))
+            {
+                gender.push($(this).val());
+            }
+        });
+
+        gender = gender.toString();
+
+        var address = $("#address").val();
+        var education = $("#education").val();
+
+        if(fullname == '' ||
+           fatherName == '' ||
+           phone == '' ||
+           email == '' ||
+           campus == '' ||
+           course == '' ||
+           gender == '' ||
+           address == '' ||
+           education == '')
+        {
+            html = '<div id="err_msg"><i class="bi bi-exclamation-triangle-fill"></i>&nbsp;&nbsp; Please must complete all steps !!</div>';
+            $("#formError").html(html);
+            $("#submit").css("background", '#00d4ff');
+            $("#submit").html('Click to Submit');
+        }
+        else
+        {
+            $("#submit").css("background", '#44b927');
+            $("#submit").html('Form Submited Successfully');
+            $("#formError").html('');
+            $("#FormSubmit")[0].reset();
+        }
+
+    });
+</script>
+
+</body>
+</html>
